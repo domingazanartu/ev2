@@ -42,17 +42,39 @@
        {nombre:"Dominga Zañartu",
        ingreso: 2016,
        trabajos: [
-       {titulo:"La guacha",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-1.jpg"},
-       {titulo:"Cervezas +56",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-2.jpg"},
-       {titulo:"Cad Cam",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-3.jpg"},
+       {titulo:"LA GUACHA",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-1.jpg"},
+       {titulo:"CERVEZAS +56",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-2.jpg"},
+       {titulo:"CAD CAM",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-3.jpg"},
        ]
 
-    }
+    },
 
+    {nombre:"Rosario Gonzalez",
+       ingreso: 2016,
+       trabajos: [
+       {titulo:"MAEZ",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo1.jpg"},
+       {titulo:"RAF",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo2.jpg"},
+       {titulo:"E&M",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo3.jpg"},
+       ]
+},
+
+{nombre:"Francisca Lopez de Heredia",
+       ingreso: 2016,
+       trabajos: [
+       {titulo:"SAZÓN",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img1.jpg"},
+       {titulo:"BOGI",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img2.jpg"},
+       {titulo:"CÁMARA",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img3.jpg"},
+       ]
+       }
     ]
 
+        $.each(curso, function(i, integrante) {
+            $("#cuestiones").append("<h2 class ='mt-5 bg-dark text-white'>" + integrante.nombre + "</h2>");
+          $.each(integrante.trabajos, function(i, trabajo) {
+              $("#cuestiones").append("<h5 class='border-top my-2 py-3'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "'class='img-fluid border-botton pb-3 mb-3'>");
+          });
+        });
 
-      $("#cuestiones").append('<h2>'+curso[0].nombre+'<h2>').append('<h4>' + curso[0].ingreso + '<h4>').append('<img src="' + curso[0].trabajos[0].imagen + '">');
     </script>
   </body>
 </html>
