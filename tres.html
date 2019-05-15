@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
+    <title>Dominga / Mi portafolio</title>
   </head>
   <body>
     <div class="container">
       <div class="row py-5">
         <div class="col-11 col-sm-10 mx-auto">
-          <h1>Hello, world!</h1>  
+          <h1>Portafolio</h1>  
+           <p class= "lead">Portafolio curso.</p>
           <div id="cuestiones"></div>
         </div>  
       </div>      
@@ -28,53 +29,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- después de ir por las bibliotecas, puedes aprovecharlas-->
     <script>
-      var a = ["Hola mundo!","Adios mundo cruel!"] 
 
-      var b = {saludo: "Hola mundo!",despedida: "Adios mundo cruel!"} 
 
-      var c = [
-        {saludo:"hola mundo",chroma:"red"},
-        {saludo:"hola",chroma:"blue"},
-        {saludo:"holaaaa",chroma:"green"}
-      ]
-
-      var curso = [
-       {nombre:"Dominga Zañartu",
-       ingreso: 2016,
-       trabajos: [
-       {titulo:"LA GUACHA",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-1.jpg"},
-       {titulo:"CERVEZAS +56",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-2.jpg"},
-       {titulo:"CAD CAM",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-3.jpg"},
-       ]
-
-    },
-
-    {nombre:"Rosario Gonzalez",
-       ingreso: 2016,
-       trabajos: [
-       {titulo:"MAEZ",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo1.jpg"},
-       {titulo:"RAF",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo2.jpg"},
-       {titulo:"E&M",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo3.jpg"},
-       ]
-},
-
-{nombre:"Francisca Lopez de Heredia",
-       ingreso: 2016,
-       trabajos: [
-       {titulo:"SAZÓN",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img1.jpg"},
-       {titulo:"BOGI",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img2.jpg"},
-       {titulo:"CÁMARA",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img3.jpg"},
-       ]
-       }
-    ]
+$.getJSON( "https://raw.githubusercontent.com/profesorfaco/dno037-2019/gh-pages/portfolio.json", function( curso ) {
 
         $.each(curso, function(i, integrante) {
             $("#cuestiones").append("<h2 class ='mt-5 bg-dark text-white'>" + integrante.nombre + "</h2>");
           $.each(integrante.trabajos, function(i, trabajo) {
-              $("#cuestiones").append("<h5 class='border-top my-2 py-3'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "'class='img-fluid border-botton pb-3 mb-3'>");
+              $("#cuestiones").append("<h5 class='border-top my-2 py-3'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "'class='img-fluid border-botton pb-3 mb-3'>").append ("<p>" + trabajo.descriptor + "</p>");
           });
         });
 
+});
     </script>
   </body>
 </html>

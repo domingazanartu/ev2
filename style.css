@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+html, body {
+	min-height:100%;
+}
 
 body {
-	background:silver;
+	background:rgba(149,157,156);
+
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+
 }
 
 h2 {
 	font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+font-family: 'Raleway', sans-serif;
 }
 
 #menu{
