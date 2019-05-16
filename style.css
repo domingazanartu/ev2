@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 
 html, body {
@@ -8,27 +8,40 @@ html, body {
 }
 
 body {
-	background:rgba(149,157,156);
+	background:rgba(112,112,112);
 
 }
 
 h1 {
 	font-family: 'Oswald', sans-serif;
+	color:white;
+	size: xx-large;
 
 }
 
 h2 {
 	font-family: 'Ubuntu', sans-serif;
+	color:white;
 }
 
-h3 {
-font-family: 'Raleway', sans-serif;
+h3,h4,h5,h6{
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+	color:white;
+	font-size: x-large;
 }
+
+
 
 #menu{
 	position: fixed;
 	bottom:2rem;
 	right:2.5rem;
+}
+
+img {
+	
+	border:8px solid white;
 }
 
 .bg-azul {
